@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Nav1</string>
+    <string name="title_to_first" translatable="false">To First</string>
+    <string name="title_to_third" translatable="false">To Third</string>
+    <string name="title_to_second" translatable="false">To Second</string>
+    <string name="title_about" translatable="false">About</string>
+    <string name="text_about" translatable="false">About text</string>
+</resources>

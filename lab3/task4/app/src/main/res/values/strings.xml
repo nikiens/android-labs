@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">Nav1</string>
+    <string name="to_first">to first</string>
+    <string name="to_third">to third</string>
+    <string name="to_second">to second</string>
+    <string name="about">About</string>
+    <string name="foo">Foo</string>
+    <string name="bar">Bar</string>
+    <string name="baz">Baz</string>
+    <string name="title_activity_extra">ExtraActivity</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+
+    <string name="hello_first_fragment">Hello first fragment</string>
+    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+    <string name="to_extra">To extra</string>
+    <string name="button">Button</string>
+</resources>

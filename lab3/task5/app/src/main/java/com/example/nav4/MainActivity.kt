@@ -1,5 +1,6 @@
 package com.example.nav4
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.Menu
@@ -38,7 +39,10 @@ class MainActivity : AppCompatActivity() {
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         return if (item.itemId == R.id.about_item) {
-            findNavController(R.id.fragment_container_view).navigate(R.id.action_global_aboutFragment)
+            val intent = Intent()
+            intent.setAction(Intent.ACTION_MAIN)
+
+            startActivity(intent)
 
             true
         } else {

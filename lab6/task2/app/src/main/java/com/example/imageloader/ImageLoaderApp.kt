@@ -8,17 +8,16 @@ import java.util.concurrent.TimeUnit
 
 class ImageLoaderApp: Application() {
 
+    private val tpe = ThreadPoolExecutor(1, 1,
+        60L, TimeUnit.SECONDS,
+        SynchronousQueue()
+    ) { r ->
+        Thread(r, "Background thread")
+    }
+    val executor = tpe
+
     init {
         tpe.allowCoreThreadTimeOut(true)
     }
 
-    companion object {
-        private val tpe = ThreadPoolExecutor(1, 1,
-            60L, TimeUnit.SECONDS,
-            SynchronousQueue()
-        ) { r ->
-            Thread(r, "Background thread")
-        }
-        val executor = tpe
-    }
 }

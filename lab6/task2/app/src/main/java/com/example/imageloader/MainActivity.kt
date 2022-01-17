@@ -8,8 +8,11 @@ import android.widget.ImageView
 import android.widget.ProgressBar
 import android.widget.RelativeLayout
 import java.net.URL
+import java.util.concurrent.Future
 
 class MainActivity : AppCompatActivity() {
+
+    lateinit var job:Future<?>
 
     private val urlStr = "https://picsum.photos/seed/picsum/200/300"
 
@@ -19,7 +22,7 @@ class MainActivity : AppCompatActivity() {
 
         val imgView = findViewById<ImageView>(R.id.imageView)
 
-        ImageLoaderApp.executor.submit {
+        job = (application as ImageLoaderApp).executor.submit {
             val url = URL(urlStr)
             val bitmap = BitmapFactory.decodeStream(url.openConnection().getInputStream())
 
@@ -27,5 +30,12 @@ class MainActivity : AppCompatActivity() {
                 imgView.setImageBitmap(bitmap)
             }
         }
+    }
+
+    
+
+    override fun onStop() {
+        super.onStop()
+        job.cancel(true)
     }
 }

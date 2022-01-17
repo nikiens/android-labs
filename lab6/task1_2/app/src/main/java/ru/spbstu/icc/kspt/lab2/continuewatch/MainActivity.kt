@@ -1,6 +1,7 @@
 package ru.spbstu.icc.kspt.lab2.continuewatch
 
 import android.annotation.SuppressLint
+import android.app.Application
 import android.content.SharedPreferences
 import android.os.Bundle
 import android.widget.TextView
@@ -40,7 +41,7 @@ class MainActivity : AppCompatActivity() {
             secondsElapsed = pref.getInt(KEY, 0)
         }
 
-        future = ContinueWatchApp.executorService.submit {
+        future = (application as ContinueWatchApp).executorService.submit {
             while (true) {
                 Thread.sleep(1000)
                 textSecondsElapsed.post {

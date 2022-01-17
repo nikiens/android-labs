@@ -33,6 +33,6 @@ class Fragment2 : Fragment() {
     }
 
     private fun onClickToFirst() {
-        findNavController().popBackStack()
+        findNavController().navigate(R.id.action11)
     }
 }

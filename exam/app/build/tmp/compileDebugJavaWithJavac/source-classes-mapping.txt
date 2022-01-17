@@ -1,0 +1,7 @@
+com/example/myapplication/IGetRandomInterface.java
+ com.example.myapplication.IGetRandomInterface
+ com.example.myapplication.IGetRandomInterface$Default
+ com.example.myapplication.IGetRandomInterface$Stub
+ com.example.myapplication.IGetRandomInterface$Stub$Proxy
+com/example/myapplication/BuildConfig.java
+ com.example.myapplication.BuildConfig
